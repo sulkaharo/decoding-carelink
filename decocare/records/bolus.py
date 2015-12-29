@@ -140,7 +140,7 @@ class BolusWizard(KnownRecord):
 
     if self.MMOL_DEFAULT:
       for key in [ 'bg', 'bg_target_high', 'bg_target_low', 'sensitivity' ]:
-        wizard[key] = wizard[key] / 10.0
+        wizard[key] = wizard[key] / * 1.8 // convert to mg/dl
     return wizard
 
 def insulin_decode (a, b, strokes=40.0):
